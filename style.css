@@ -1,0 +1,308 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:initial;
+    line-height: 1;
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header a:hover {
+    color: brown;
+}
+
+img {
+    max-width: 100%;
+}
+
+#header {
+    background-image: url(img/mainvisual.jpg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+nav ul {
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 10px black);
+}
+
+nav ul li a {
+    color: whitesmoke;
+}
+
+.site-title {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    filter: drop-shadow(1px 1px 10px black);
+}
+
+#menu {
+    margin-top: 10px;
+} 
+
+#menu .menu-img {
+    background-image: url(img/menu.jpg);
+    background-attachment: fixed;
+    min-height: 30vh;
+    position: relative;
+    
+}
+
+.sec-title {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    /* border: 3px solid red; */
+}
+
+.menu-item:first-child {
+    border-right: 1px solid black;
+    
+}
+
+.menu-item {
+    width: 50%;
+}
+
+.item-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 5px solid brown;
+}
+
+#menu .menu-item dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#menu .menu-item dl dt {
+    width: 80%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 3px dotted black;
+
+}
+
+#menu .menu-item dl dd {
+    width: 20%;
+    text-align: right;
+}
+
+#about {
+    margin-top: 10px;
+}
+
+#about .about-img {
+    background-image: url(img/about.jpg);
+    background-attachment: fixed;
+    min-height: 30vh;
+    position: relative;
+}
+
+#about ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+#about li {
+    width: 50%;
+    line-height: 2;
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    
+}
+
+#about .btn {
+    width: 160px;
+    height: 50px;
+    line-height: 3.5;
+    display: inline-block;
+    color: #000;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+#about .btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#about .btn::before,
+#about .btn::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #e03131;
+    transition: all 0.3s ease;
+}
+  #about .btn span::before,
+  #about .btn span::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: #e03131;
+    transition: all 0.3s ease;
+}
+#about .btn::before,
+#about .btn span::before {
+    width: 2px;
+    height: 50%;
+}
+#about .btn::after,
+#about .btn span::after {
+    width: 20%;
+    height: 2px;
+}
+
+#about .btn:hover::before,
+#about .btn span:hover::before {
+    height: 100%;
+}
+
+#about .btn:hover::after,
+#about .btn span:hover::after {
+    width: 100%;
+}
+
+#location .location-img {
+    background-image: url(img/location.jpg);
+    background-attachment: fixed;
+    min-height: 30vh;
+    position: relative;
+    margin-top: 10px;
+}
+
+#location .item-map {
+    filter: grayscale(1);
+    margin-bottom: 20px;
+}
+
+#location .item-map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+#location .item-info {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#location .item-info p {
+    margin-bottom: 20px;
+}
+
+#footer {
+    /* border: 3px solid red; */
+    text-align: center;
+    font-size: 2px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .site-title {
+      top: 42%;
+    }
+    .sec-title {
+      font-size: 2rem;
+      top: 26%;
+    }
+    .item-title {
+      font-size: 1.25rem;
+      margin-bottom :25px;
+    }
+    .fixed-bg {
+      height: 94px;
+      /* スマホ時は背景をスクロールするように変更 */
+      background-attachment: scroll;
+    }
+    .wrapper {
+      padding: 30px 16px 60px 16px;
+    }
+  
+    /*-------------------------------------------
+    Menu
+    -------------------------------------------*/
+    #menu {
+      margin-top: 10px;
+    }
+    #menu .menu-content {
+      flex-direction: column;
+    }
+    #menu .menu-item {
+      width: 100%;
+      padding: 0;
+    }
+    #menu .menu-item:first-child {
+      border-right: none;
+    }
+    #menu .menu-item dl {
+      margin-bottom: 10px;
+    }
+    #menu .menu-item dl.food {
+      margin-bottom: 10px;
+    }
+  
+    /*-------------------------------------------
+    About
+    -------------------------------------------*/
+    #about ul {
+      flex-direction: column;
+    }
+    #about li {
+      width: 100%;
+    }
+  }
+
+  .sec-title {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+  
+  
+  
